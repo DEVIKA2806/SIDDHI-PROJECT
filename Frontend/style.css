@@ -24,7 +24,7 @@
     /* FIX: Fix the bar at the top of the screen */
     position: fixed;
     top: 0; 
-    z-index: 1000;
+    z-index: 1010;
     width: 100%; 
     background-color: white; 
 }
@@ -695,4 +695,102 @@
 
 .add-to-cart-btn-small:hover {
     background-color: #000;
+}
+
+/* Default state for auth panels - initially hidden and centered */
+.auth-panel {
+    display: none; /* Initially hide the panel */
+    position: fixed;
+    z-index: 2000; /* Must be higher than the navbar (1010) */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.6); /* Black background with opacity */
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.auth-content {
+    background-color: #fefefe;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    width: 90%; 
+    max-width: 400px; /* Standard width for a form modal */
+    position: relative;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Helper class used in HTML for initial state of register form */
+.hidden {
+    display: none !important;
+}
+
+/* Auth Panel Form Styling */
+.auth-content h3 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #00555A;
+}
+
+.login-form input,
+.register-form input,
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+    font-size: 16px;
+}
+
+.auth-button {
+    width: 100%;
+    background-color: #A08C4A;
+    color: white;
+    padding: 12px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.auth-button:hover {
+    background-color: #8C7B3E;
+}
+
+.switch-form-text, .switch-form-text a {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.switch-form-text a {
+    color: #00555A;
+    font-weight: 500;
+    cursor: pointer;
 }
