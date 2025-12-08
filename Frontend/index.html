@@ -18,12 +18,18 @@
                 <ul>
                     <li><a href="index.html"><span>Home</span></a></li>
                     <li><a href="candles.html"><span>Collection</span></a></li>
-                    <li><a href="#"><span>Our Story</span></a></li>
+                    <li><a href="index.html#our-story-anchor"><span>Our Story</span></a></li>
                     <li><a href="#"><span>Contact Us</span></a></li>
                 </ul>
             </div>
             <div class="nav-right">
-                <div class="login"><i class="fa-solid fa-user"></i></div>
+                <div class="login-area">
+                    <div class="user-login-status">
+                        <i class="fa-solid fa-user" id="login-icon"></i>
+                        <span id="user-name-display" class="hidden"></span>
+                        <button id="logout-btn" class="hidden">Logout</button>
+                    </div>
+                </div>
                 <div class="cart"><i class="fa-solid fa-cart-shopping"></i></div>
             </div>
         </div>
@@ -107,22 +113,23 @@
     <div class="auth-panel login-panel" id="login-panel">
         <div class="auth-content">
             <span class="close-btn">&times;</span>
-            <h3>Welcome Back!</h3>
+            <h3 id="auth-panel-title">Welcome Back!</h3>
             <form class="login-form">
                 <input type="email" placeholder="Email Address" required>
                 <input type="password" placeholder="Password" required>
                 <button type="submit" class="auth-button">Log In</button>
                 <p class="switch-form-text">Don't have an account? <a href="#" id="show-register">Register here</a></p>
+                <p class="form-message"></p>
             </form>
 
             <form class="register-form hidden">
-                <h3>Create Account</h3>
                 <input type="text" placeholder="Full Name" required>
                 <input type="email" placeholder="Email Address" required>
                 <input type="password" placeholder="Create Password" required>
                 <input type="password" placeholder="Confirm Password" required>
                 <button type="submit" class="auth-button">Sign Up</button>
                 <p class="switch-form-text">Already a member? <a href="#" id="show-login">Log In</a></p>
+                <p class="form-message"></p>
             </form>
         </div>
     </div>
@@ -136,6 +143,7 @@
                 <input type="email" placeholder="Your Email" required>
                 <textarea placeholder="Your Message" rows="5" required></textarea>
                 <button type="submit" class="auth-button">Send Message</button>
+                <p class="form-message"></p>
             </form>
         </div>
     </div>
@@ -189,7 +197,7 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="candles.html">Collection</a></li>
-                    <li><a href="#">Our Story</a></li>
+                    <li><a href="index.html#our-story-anchor">Our Story</a></li>
                     <li><a href="#">Contact Us</a></li>
                 </ul>
             </div>
@@ -197,8 +205,8 @@
             <div class="footer-col footer-contact">
                 <h4>Contact & Support</h4>
                 <ul>
-                    <li>Email: info@sncandles.com</li>
-                    <li>Phone: +91 123 456 7890</li>
+                    <li>Email: <a href="mailto:info@sncandles.com">info@sncandles.com</a></li>
+                    <li>Phone: <a href="tel:+911234567890">+91 123 456 7890</a></li>
                     <li><a href="#">Shipping & Returns</a></li>
                     <li><a href="#">FAQ</a></li>
                 </ul>
@@ -210,6 +218,7 @@
                 <form action="#" method="POST">
                     <input type="email" placeholder="Enter your email address" required>
                     <button type="submit">Subscribe</button>
+                    <p class="form-message"></p>
                 </form>
                 <div class="social-icons-footer">
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
